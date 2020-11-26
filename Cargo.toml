@@ -4,8 +4,17 @@ version = "0.1.0"
 authors = ["oscar bernardini <bernardini687@gmail.com>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "app"
+path = "src/main.rs"
 
 [dependencies]
 actix-rt = "1.1.1"
 actix-web = "3.3.0"
+
+[dev-dependencies]
+reqwest = "0.10.9"
+tokio = "0.2.22"
