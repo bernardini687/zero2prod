@@ -2,7 +2,7 @@
 
 # set -x # print all executed commands
 set -e # abort on non-zero exit codes
-set -u # abort on undeclared variables
+# set -u # abort on undeclared variables
 set -o pipefail
 
 # allow custom values or default to what's on the right of `:=`

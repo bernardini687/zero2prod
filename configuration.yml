@@ -1,0 +1,7 @@
+port: 8080
+db:
+  host: 'localhost'
+  name: 'newsletter'
+  password: 'password'
+  port: 5432
+  user: 'postgres'
