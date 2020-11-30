@@ -23,7 +23,7 @@ if [[ -z ${SKIP_DOCKER} ]]; then
 fi
 
 # ping postgres until it's available (make sure `psql` is installed)
-until PGPASSWORD=${DB_PASSWORD} psql -q -h localhost -U ${DB_USER} -p ${DB_PORT} -d postgres -c "\q"; do
+until PGPASSWORD=${DB_PASSWORD} psql -h localhost -U ${DB_USER} -p ${DB_PORT} -d postgres -c "\q"; do
   sleep 1
 done
 
