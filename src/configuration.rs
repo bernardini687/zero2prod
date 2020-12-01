@@ -20,6 +20,13 @@ impl DatabaseSettings {
             self.user, self.password, self.host, self.port, self.name
         )
     }
+
+    pub fn connection_url_without_db(&self) -> String {
+        format!(
+            "postgres://{}:{}@{}:{}",
+            self.user, self.password, self.host, self.port
+        )
+    }
 }
 
 pub fn get_app_settings() -> Result<AppSettings, config::ConfigError> {
